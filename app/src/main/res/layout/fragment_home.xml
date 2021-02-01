@@ -1,0 +1,494 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_gravity="bottom"
+    tools:context=".Fragment.HomeFragment">
+    <FrameLayout
+        android:id="@+id/homefrag_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottomnav"
+        android:background="@color/white">
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <TextView
+                        android:id="@+id/newsTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="News"
+                        app:layout_constraintBottom_toTopOf="@+id/newscard"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/settingView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:layout_marginBottom="20dp"
+                        android:text="..."
+                        app:layout_constraintBottom_toTopOf="@+id/newscard"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/newsTV" />
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:id="@+id/newscard"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_15sdp"
+                            android:layout_marginBottom="10dp"
+                            app:layout_constraintBottom_toTopOf="@+id/paymenthistory"
+                           >
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/newsrecyclerView"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    <TextView
+                        android:id="@+id/paymenthistory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginBottom="20dp"
+                        android:text="payment History"
+
+                        app:layout_constraintBottom_toTopOf="@+id/paymentcard"
+
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/paymentcardTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:layout_marginBottom="20dp"
+                        android:text="..."
+                        app:layout_constraintBottom_toTopOf="@+id/paymentcard"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_margin="@dimen/_5sdp"
+                            android:id="@+id/paymentcard"
+                            android:layout_marginLeft="@dimen/_15sdp"
+                            android:layout_marginRight="@dimen/_15sdp"
+                            android:layout_marginBottom="10dp"
+                            app:layout_constraintBottom_toTopOf="@+id/govtServicesTV">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/cardsrecyclerview"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    <TextView
+                        android:id="@+id/govtServicesTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:text="Govt Services"
+                        app:layout_constraintBottom_toTopOf="@+id/govtservicecardView"
+                        app:layout_constraintStart_toStartOf="parent" />
+                    <TextView
+                        android:id="@+id/govtsettingiconView"
+                        android:layout_width="0dp"
+                        app:layout_constraintWidth_percent="0.4"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:layout_marginBottom="20dp"
+                        android:text="..."
+                        android:gravity="end"
+                        app:layout_constraintBottom_toTopOf="@+id/govtservicecardView"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/govtservicecardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginRight="@dimen/_15sdp"
+
+
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp"
+                        android:elevation="5dp"
+                        app:layout_constraintBottom_toTopOf="@+id/othersServicesTV"
+                        tools:ignore="MissingConstraints"
+                        tools:layout_editor_absoluteX="5dp">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="@dimen/_20sdp"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:layout_margin="@dimen/_5sdp">
+
+                            <ImageView
+                                android:id="@+id/workinggovt_IV"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.2"
+                                app:srcCompat="@drawable/speed_p" />
+
+                            <TextView
+                                android:id="@+id/workgovtTV"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+
+                                android:text="Working with govt"
+                                app:layout_constraintStart_toStartOf="@+id/workinggovt_IV"
+                                app:layout_constraintTop_toBottomOf="@+id/workinggovt_IV"
+                                app:layout_constraintWidth_percent="0.2" />
+
+                            <ImageView
+                                android:id="@+id/worktransport_IV"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginLeft="20dp"
+                                app:layout_constraintStart_toEndOf="@+id/workinggovt_IV"
+                                app:layout_constraintTop_toTopOf="@+id/workinggovt_IV"
+                                app:layout_constraintWidth_percent="0.2"
+                                app:srcCompat="@drawable/speed_p" />
+
+                            <TextView
+                                android:id="@+id/worktransportTV"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+
+                                android:text="Working &amp; Transport"
+                                app:layout_constraintStart_toStartOf="@+id/worktransport_IV"
+                                app:layout_constraintTop_toBottomOf="@+id/worktransport_IV"
+                                app:layout_constraintWidth_percent="0.2" />
+
+                            <ImageView
+                                android:id="@+id/housingproprtyIV"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginLeft="20dp"
+                                app:layout_constraintStart_toEndOf="@+id/worktransport_IV"
+                                app:layout_constraintTop_toTopOf="@+id/worktransport_IV"
+                                app:layout_constraintWidth_percent="0.2"
+                                app:srcCompat="@drawable/speed_p" />
+
+                            <TextView
+                                android:id="@+id/mediaappTV1"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+
+                                android:text="Housing &amp; property"
+                                android:gravity="center_horizontal"
+                                app:layout_constraintStart_toStartOf="@+id/housingproprtyIV"
+                                app:layout_constraintTop_toBottomOf="@+id/housingproprtyIV"
+                                app:layout_constraintWidth_percent="0.2" />
+
+
+                            <ImageView
+                                android:id="@+id/mediaview"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginRight="10dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/housingproprtyIV"
+                                app:layout_constraintTop_toTopOf="@+id/housingproprtyIV"
+                                app:layout_constraintWidth_percent="0.2"
+                                app:srcCompat="@drawable/speed_p" />
+
+                            <TextView
+                                android:id="@+id/mediaTView"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1"
+                                android:text="Media "
+                                app:layout_constraintStart_toStartOf="@+id/mediaview"
+                                app:layout_constraintTop_toBottomOf="@+id/mediaview"
+                                app:layout_constraintWidth_percent="0.2" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/otherservcecardView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:layout_marginStart="10dp"
+
+                        android:layout_marginEnd="10dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="5dp"
+
+                        android:layout_marginBottom="10dp"
+                        android:elevation="5dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        tools:ignore="MissingConstraints">
+
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:paddingBottom="@dimen/_20sdp"
+                            android:paddingTop="@dimen/_10sdp"
+                            android:layout_margin="@dimen/_5sdp">
+
+                            <ImageView
+                                android:id="@+id/utityview_IV"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="10dp"
+                                android:layout_marginTop="10dp"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintWidth_percent="0.2"
+                                app:srcCompat="@drawable/speed_p" />
+
+                            <TextView
+                                android:id="@+id/utility_Tv"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1"
+                                android:text="Utility"
+                                app:layout_constraintStart_toStartOf="@+id/utityview_IV"
+                                app:layout_constraintTop_toBottomOf="@+id/utityview_IV"
+                                app:layout_constraintWidth_percent="0.2" />
+
+                            <ImageView
+                                android:id="@+id/sharjahnews_IV"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginLeft="20dp"
+                                app:layout_constraintStart_toEndOf="@+id/utityview_IV"
+                                app:layout_constraintTop_toTopOf="@+id/utityview_IV"
+                                app:layout_constraintWidth_percent="0.2"
+                                app:srcCompat="@drawable/speed_p" />
+
+                            <TextView
+                                android:id="@+id/sharjahnewsTV"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1"
+                                android:text="Sharjah"
+                                app:layout_constraintStart_toStartOf="@+id/sharjahnews_IV"
+                                app:layout_constraintTop_toBottomOf="@+id/sharjahnews_IV"
+                                app:layout_constraintWidth_percent="0.2" />
+
+                            <ImageView
+                                android:id="@+id/media_IV"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginLeft="20dp"
+                                app:layout_constraintStart_toEndOf="@+id/sharjahnews_IV"
+                                app:layout_constraintTop_toTopOf="@+id/sharjahnews_IV"
+                                app:layout_constraintWidth_percent="0.2"
+                                app:srcCompat="@drawable/speed_p" />
+
+                            <TextView
+                                android:id="@+id/mediaappTV"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1"
+                                android:text="Media"
+                                app:layout_constraintStart_toStartOf="@+id/media_IV"
+                                app:layout_constraintTop_toBottomOf="@+id/media_IV"
+                                app:layout_constraintWidth_percent="0.2" />
+
+
+                            <ImageView
+                                android:id="@+id/sharjahlaibIV"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="20dp"
+                                android:layout_marginLeft="20dp"
+                                android:layout_marginEnd="10dp"
+                                android:layout_marginRight="10dp"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintStart_toEndOf="@+id/media_IV"
+                                app:layout_constraintTop_toTopOf="@+id/media_IV"
+                                app:layout_constraintWidth_percent="0.2"
+                                app:srcCompat="@drawable/speed_p" />
+
+                            <TextView
+                                android:id="@+id/mediaTV"
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:gravity="center_horizontal"
+                                android:maxLines="1"
+                                android:text="Sharjah "
+                                app:layout_constraintStart_toStartOf="@+id/sharjahlaibIV"
+                                app:layout_constraintTop_toBottomOf="@+id/sharjahlaibIV"
+                                app:layout_constraintWidth_percent="0.2" />
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/othersServicesTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_15sdp"
+                        android:layout_marginBottom="20dp"
+                        android:text="OthersServices"
+                        app:layout_constraintBottom_toTopOf="@+id/otherservcecardView"
+                        app:layout_constraintStart_toStartOf="parent" />
+                    <TextView
+                        android:id="@+id/settingiconView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:layout_marginBottom="20dp"
+                        android:text="..."
+                        app:layout_constraintBottom_toTopOf="@+id/otherservcecardView"
+                        app:layout_constraintEnd_toEndOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </LinearLayout>
+        </ScrollView>
+    </FrameLayout>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottomnav"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="5dp"
+        app:cardCornerRadius="10dp"
+        android:layout_alignParentBottom="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:weightSum="3">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1"
+                android:gravity="center_vertical"
+                android:id="@+id/homefragment"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/homeicon"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:id="@+id/serviceTV"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1"
+                android:gravity="center_vertical"
+                android:id="@+id/servicefragment"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/homeicon"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Services"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:id="@+id/postTV"/>
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:weightSum="1"
+                android:gravity="center_vertical"
+                android:id="@+id/postfragment"
+                android:layout_weight="1">
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/homeicon"
+                    android:layout_gravity="center_horizontal"
+                    />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Post"
+                    android:gravity="center"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/black"
+                    android:id="@+id/profileTV"/>
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:layout_marginStart="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="4dp"
+            android:layout_marginRight="4dp"
+
+            app:cardCornerRadius="10dp"
+            app:cardElevation="5dp"
+
+            android:layout_marginBottom="4dp"
+
+            android:elevation="5dp"
+            tools:ignore="MissingConstraints">
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="@dimen/_10sdp"
+                >
+
+                <ImageView
+                    android:id="@+id/home_IV"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:srcCompat="@drawable/speed_p" />
+
+                <TextView
+                    android:id="@+id/home_Tv"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.2"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="HomeTitle"
+                    app:layout_constraintStart_toStartOf="@+id/home_IV"
+                    app:layout_constraintTop_toBottomOf="@+id/home_IV" />
+
+                <ImageView
+                    android:id="@+id/travel_IV"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    app:layout_constraintStart_toEndOf="@+id/home_IV"
+                    app:layout_constraintTop_toTopOf="@+id/home_IV"
+                    app:srcCompat="@drawable/speed_p" />
+                <TextView
+                    android:id="@+id/traveTV"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="VainTitle"
+                    android:maxLines="1"
+                    app:layout_constraintStart_toStartOf="@+id/travel_IV"
+                    app:layout_constraintTop_toBottomOf="@+id/travel_IV" />
+
+                <ImageView
+                    android:id="@+id/property_IV"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    app:layout_constraintStart_toEndOf="@+id/travel_IV"
+                    app:layout_constraintTop_toTopOf="@+id/travel_IV"
+                    app:srcCompat="@drawable/speed_p" />
+                <TextView
+                    android:id="@+id/propertyTV"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Propoerty"
+                    android:maxLines="1"
+                    app:layout_constraintStart_toStartOf="@+id/property_IV"
+                    app:layout_constraintTop_toBottomOf="@+id/property_IV" />
+
+
+                <ImageView
+                    android:id="@+id/media_IV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/property_IV"
+                    app:layout_constraintTop_toTopOf="@+id/property_IV"
+                    app:layout_constraintWidth_percent="0.2"
+                    app:srcCompat="@drawable/speed_p" />
+                <TextView
+                    android:id="@+id/mediaTV"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Media"
+                    android:maxLines="1"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/media_IV"
+                    app:layout_constraintTop_toBottomOf="@+id/media_IV" />
+
+                <ImageView
+                    android:id="@+id/complaintsIV"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintStart_toStartOf="@+id/home_Tv"
+                    app:layout_constraintTop_toBottomOf="@+id/home_Tv"
+                    app:srcCompat="@drawable/speed_p" />
+
+                <TextView
+                    android:id="@+id/complainTV"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Complain"
+                    android:maxLines="1"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/complaintsIV"
+                    app:layout_constraintTop_toBottomOf="@+id/complaintsIV" />
+
+                <ImageView
+                    android:id="@+id/serviceIV"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    app:layout_constraintStart_toEndOf="@+id/complaintsIV"
+                    app:layout_constraintTop_toTopOf="@+id/complaintsIV"
+                    app:srcCompat="@drawable/speed_p" />
+                <TextView
+                    android:id="@+id/serviceTV"
+                    android:layout_width="0dp"
+                    android:maxLines="1"
+                    app:layout_constraintWidth_percent="0.2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="VainTitle"
+                    app:layout_constraintStart_toStartOf="@+id/serviceIV"
+                    app:layout_constraintTop_toBottomOf="@+id/serviceIV" />
+                <ImageView
+                    android:id="@+id/workIV"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    app:layout_constraintStart_toEndOf="@+id/serviceIV"
+                    app:layout_constraintTop_toTopOf="@+id/serviceIV"
+                    app:srcCompat="@drawable/speed_p" />
+                <TextView
+                    android:id="@+id/workTV"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="VainTitle"
+                    android:maxLines="1"
+                    app:layout_constraintStart_toStartOf="@+id/workIV"
+                    app:layout_constraintTop_toBottomOf="@+id/workIV" />
+
+                <ImageView
+                    android:id="@+id/schedualIV"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginRight="10dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/workIV"
+                    app:layout_constraintTop_toTopOf="@+id/workIV"
+                    app:layout_constraintWidth_percent="0.2"
+                    app:srcCompat="@drawable/speed_p" />
+                <TextView
+                    android:id="@+id/schedualTV"
+                    android:layout_width="0dp"
+                    android:maxLines="1"
+                    app:layout_constraintWidth_percent="0.2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="Schedual"
+                    app:layout_constraintStart_toStartOf="@+id/schedualIV"
+                    app:layout_constraintTop_toBottomOf="@+id/schedualIV" />
+
+
+                <ImageView
+                    android:id="@+id/comerceIV"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="40dp"
+                    app:layout_constraintStart_toStartOf="@+id/complainTV"
+                    app:layout_constraintTop_toBottomOf="@+id/complainTV"
+                    app:srcCompat="@drawable/speed_p" />
+                <TextView
+                    android:id="@+id/comerceTV"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="Commerce"
+                    android:maxLines="1"
+                    android:gravity="center_horizontal"
+                    app:layout_constraintStart_toStartOf="@+id/comerceIV"
+                    app:layout_constraintTop_toBottomOf="@+id/comerceIV" />
+
+                <ImageView
+                    android:id="@+id/waletIV"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginLeft="20dp"
+                    app:layout_constraintStart_toEndOf="@+id/comerceIV"
+                    app:layout_constraintTop_toTopOf="@+id/comerceIV"
+                    app:srcCompat="@drawable/speed_p" />
+                <TextView
+                    android:id="@+id/waletTV"
+                    android:layout_width="0dp"
+                    app:layout_constraintWidth_percent="0.2"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center_horizontal"
+                    android:text="Wallet"
+                    android:maxLines="1"
+                    app:layout_constraintStart_toStartOf="@+id/waletIV"
+                    app:layout_constraintTop_toBottomOf="@+id/waletIV" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.cardview.widget.CardView>
+
+
+</LinearLayout>
